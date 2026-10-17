@@ -13,6 +13,8 @@ A security-focused Python utility designed for SOC analysts, incident responders
 5. [Usage & Execution](#usage--execution)
 6. [Execution Workflow & Outputs](#execution-workflow--outputs)
 
+---
+
 ## Features
 
 - **No Custom App Registration Needed**: Uses the pre-authorized, public Microsoft Azure CLI Client ID (`04b07795-8ddb-461a-bbee-02f9e1bf7b46`) with interactive browser-based PKCE login.
@@ -34,6 +36,8 @@ A security-focused Python utility designed for SOC analysts, incident responders
 2. **OData Query Construction**: A UTC-based cutoff timestamp is calculated using the configured day offset. An OData filter string is formed:
    ```text
    userPrincipalName eq '<user>' and createdDateTime ge <UTC_DATE>
+   
+---
    
 ## Prerequisites & Dependencies
 
@@ -71,6 +75,8 @@ conda install urllib3
 pip install urllib3
 ```
 
+---
+
 ## Usage & Execution
 
 ### 1. Default Query (Last 15 Days))
@@ -81,8 +87,6 @@ python graph_signins.py -u user@company.com
 
 ### 2. Custom Time Window (-d)
 
-Prepare a text file (e.g., ips.txt) with target IP addresses. Lines, spaces, commas, or CIDR suffixes (/32) are supported:
-
 ```
 # Query the last 7 days
 python graph_signins.py -u user@company.com -d 7
@@ -90,6 +94,8 @@ python graph_signins.py -u user@company.com -d 7
 # Query the last 30 days
 python graph_signins.py -u user@company.com -d 30
 ```
+
+---
 
 ## Execution Workflow & Outputs
 
@@ -100,3 +106,5 @@ Terminal Output: Results will stream in real time, outlining the date, applicati
 CSV Export: Generated as signins_<user>_<days>d_<timestamp>.csv in the current working directory.
 
 HTML Dashboard: Generated as signins_<user>_<days>d_<timestamp>.html. Double-click the file to open it in Microsoft Edge, Google Chrome, or any modern web browser to utilize interactive search and filtering.
+
+---
