@@ -45,7 +45,7 @@ A security-focused Python utility designed for SOC analysts, incident responders
   
 - Azure / Microsoft Entra ID Requirements
 - Tenant License: Microsoft Entra ID P1 or P2 (or licensing suites such as Microsoft 365 E3/E5).
-- Delegated Permission: AuditLog.Read.All (granted or consented within the tenant)[cite: 2].
+- Delegated Permission: AuditLog.Read.All (granted or consented within the tenant).
 
 - Directory Roles (User Level): The analyst account performing the browser login must possess at least one of the following roles:
   -  `Security Reader (Recommended for SOC analysts)`
@@ -93,10 +93,10 @@ python graph_signins.py -u user@company.com -d 30
 
 ## Execution Workflow & Outputs
 
-Authentication: A browser window will open automatically[cite: 2]. Select your account and complete authentication/MFA[cite: 2].
+Authentication: A browser window will open automatically. Select your account and complete authentication/MFA.
 
-Terminal Output: Results will stream in real time, outlining the date, application, IP, location, device details, and status for each sign-in[cite: 2].
+Terminal Output: Results will stream in real time, outlining the date, application, IP, location, device details, and status for each sign-in.
 
-CSV Export: Generated as signins_<user>_<days>d_<timestamp>.csv in the current working directory[cite: 2].
+CSV Export: Generated as signins_<user>_<days>d_<timestamp>.csv in the current working directory.
 
-HTML Dashboard: Generated as signins_<user>_<days>d_<timestamp>.html[cite: 2]. Double-click the file to open it in Microsoft Edge, Google Chrome, or any modern web browser to utilize interactive search and filtering[cite: 2].
+HTML Dashboard: Generated as signins_<user>_<days>d_<timestamp>.html. Double-click the file to open it in Microsoft Edge, Google Chrome, or any modern web browser to utilize interactive search and filtering.
