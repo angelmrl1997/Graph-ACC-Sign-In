@@ -48,15 +48,16 @@ A security-focused Python utility designed for SOC analysts, incident responders
 - Delegated Permission: AuditLog.Read.All (granted or consented within the tenant)[cite: 2].
 
 - Directory Roles (User Level): The analyst account performing the browser login must possess at least one of the following roles:
-  -  `Security Reader (Recommended for SOC analysts)[cite: 2]`
+  -  `Security Reader (Recommended for SOC analysts)`
 
-Reports Reader
+  -  `Reports Reader`
 
-Global Reader
+  -  `Global Reader`
 
-Security Administrator
+  -  `Security Administrator`
 
-Global Administrator
+  -  `Global Administrator`
+
 ---
 
 ## Installation Guide
